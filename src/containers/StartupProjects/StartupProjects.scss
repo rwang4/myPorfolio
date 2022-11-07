@@ -1,0 +1,98 @@
+@import "../../_globalColor";
+
+.project-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: $lightBackground2;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid $lightBorder1;
+  justify-content: center;
+}
+.project-card-light {
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.project-card-dark {
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.25s ease;
+}
+
+.project-detail {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.project-card-light:hover {
+  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+}
+.project-card-dark:hover {
+  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+}
+.project-image {
+  opacity: 1;
+  transition: 0.5s ease;
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project-card:hover .project-image {
+  opacity: 0.3;
+}
+
+.project-card:hover .project-detail {
+  opacity: 1;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem 1rem;
+}
+
+.card_image {
+  max-height: 100%;
+  height: 400px;
+  width: auto;
+}
+.card_title {
+  color: $titleColor;
+  font-size: 34px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 15px 0 0 0;
+}
+
+.card_title_dark{color: $textColorDark;
+  font-size: 34px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 15px 0 0 0;}
+
+.card_subtitle {
+  color: $cardSubtitle;
+  font-size: 24px;
+  line-height: 1.5rem;
+}
+@media (max-width: 768px) {
+  .project-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,107 @@
+@import "../../_globalColor";
+
+.contact-div-main {
+  display: flex;
+}
+
+.dark-mode a {
+  color: $textColorDark;
+}
+
+.contact-div-main > * {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 65px;
+  font-weight: 400;
+}
+
+.contact-info{
+  font-size: 30px;
+  font-weight: 400;
+  color: $cardSubtitle;
+}
+
+.contact-detail,
+.contact-detail-email {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.contact-detail:hover,
+.contact-detail-email:hover {
+  color: $textColor;
+  text-shadow: 2px 1px 2px $contactDetailHoverTS;
+  transition: all 0.3s;
+}
+
+.contact-subtitle {
+  text-transform: uppercase;
+}
+
+.contact-text-div {
+  margin-top: 1.5rem;
+}
+
+.contact-margin-top {
+  margin-top: 4rem;
+}
+
+.profile-image {
+  float: right;
+  overflow: hidden;
+  border-radius: 50%;
+  border-style: double;
+  border-width: 13px;
+  border-color: $githubProfileCardBorder;
+  box-shadow: $lightBoxShadowDark 0px 10px 30px 20px;
+  width: auto;
+  height: 400px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.profile-image:hover{
+  box-shadow: $lightBoxShadowDarker 0px 10px 30px 10px;
+}
+
+.avatar-image{
+  max-width: 100%;
+  max-height: 100%;
+}
+/* Media Query */
+@media (max-width: 1380px), (max-width: 768px) {
+  .contact-title {
+    font-size: 56px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .contact-text-div {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .contact-detail,
+  .contact-detail-email {
+    font-size: 20px;
+  }
+
+  .contact-image-div {
+    display: none;
+  }
+}
